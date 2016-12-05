@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SOj-XG-f1j">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Artist Search-->
+        <scene sceneID="zJq-m6-ntd">
+            <objects>
+                <viewController storyboardIdentifier="artistSearchVC" id="dss-ee-RE0" customClass="ArtistSearchViewController" customModule="MVVMPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g2k-O3-eQB"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Cx-Ht-Vpk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="28L-Vi-6AN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rKK-IR-Djq">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zuo-SB-FtS">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zuo-SB-FtS" firstAttribute="leading" secondItem="28L-Vi-6AN" secondAttribute="leading" id="4rj-mI-UjV"/>
+                            <constraint firstAttribute="trailing" secondItem="rKK-IR-Djq" secondAttribute="trailing" id="Dg4-nu-ujk"/>
+                            <constraint firstItem="rKK-IR-Djq" firstAttribute="leading" secondItem="28L-Vi-6AN" secondAttribute="leading" id="Hxb-pa-f4Y"/>
+                            <constraint firstItem="9Cx-Ht-Vpk" firstAttribute="top" secondItem="rKK-IR-Djq" secondAttribute="bottom" id="JzO-5C-5OL"/>
+                            <constraint firstItem="rKK-IR-Djq" firstAttribute="top" secondItem="Zuo-SB-FtS" secondAttribute="bottom" id="LyT-sx-Rpt"/>
+                            <constraint firstItem="Zuo-SB-FtS" firstAttribute="top" secondItem="g2k-O3-eQB" secondAttribute="bottom" id="OzU-JF-zfw"/>
+                            <constraint firstItem="rKK-IR-Djq" firstAttribute="leading" secondItem="28L-Vi-6AN" secondAttribute="leading" id="Q5z-dx-ucH"/>
+                            <constraint firstItem="9Cx-Ht-Vpk" firstAttribute="top" secondItem="rKK-IR-Djq" secondAttribute="bottom" id="YB9-Nx-5gd"/>
+                            <constraint firstAttribute="trailing" secondItem="rKK-IR-Djq" secondAttribute="trailing" id="hae-rn-afS"/>
+                            <constraint firstAttribute="trailing" secondItem="Zuo-SB-FtS" secondAttribute="trailing" id="mXC-gp-bsH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artist Search" id="Ntn-Gq-G1O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZx-fw-540" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U44-DJ-hJa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SOj-XG-f1j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0jI-hG-etj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dss-ee-RE0" kind="relationship" relationship="rootViewController" id="nUV-Zb-m5I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBn-OA-d91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="105"/>
+        </scene>
+    </scenes>
+</document>
