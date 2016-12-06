@@ -12,7 +12,8 @@ struct Artist {
     
     var identifier: String?
     var name: String?
-    var imageURL: String?
+    var uri: String?
+    var genres: String?
     
     init(artist: [String: AnyObject]) {
         if let identifier = artist["id"] as? String {
@@ -21,9 +22,12 @@ struct Artist {
         if let name = artist["name"] as? String {
             self.name = name
         }
-        if let image = artist["images"]?.firstObject as? [String: AnyObject],
-            let url = image["url"] as? String {
-            self.imageURL = url
+        if let uri = artist["uri"] as? String {
+            self.uri = uri
         }
+        if let genres = artist["genres"]?.firstObject as? String {
+            self.genres = genres
+        }
+        
     }
 }
